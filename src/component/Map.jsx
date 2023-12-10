@@ -13,13 +13,15 @@ import { useEffect, useState } from "react";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useCities } from "../Contexts/CitiesContexts";
 import Button from "./Button";
+import { UseUrlPosition } from "../hooks/UseUrlPosition";
 function Map() {
   // const navigate = useNavigate();
   const { cities } = useCities();
   const [mapPosition, setmapPosition] = useState([40, 0]);
-  const [searchParams] = useSearchParams();
-  const maplat = searchParams.get("lat");
-  const maplng = searchParams.get("lng");
+  const [maplat,maplng]=UseUrlPosition();
+  // const [searchParams] = useSearchParams();
+  // const maplat = searchParams.get("lat");
+  // const maplng = searchParams.get("lng");
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
@@ -54,13 +56,14 @@ function Map() {
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
         {cities.map((city) => (
-          <Marker position={[city.position.lat, city.position.lng]}>
+          <Marker position={[city.position.lat, city.position.lng]} key={city.id}>
             <Popup>
               <span>{city.emoji}</span>
               <span>{city.cityName}</span>
             </Popup>
           </Marker>
-        ))}
+          
+        ) )}
         <ChangeCenter position={mapPosition} />
         <DetectClick />
       </MapContainer>
