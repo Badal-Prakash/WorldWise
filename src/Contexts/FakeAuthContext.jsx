@@ -11,11 +11,10 @@ function reducer(state, action) {
       return { ...state, user: action.payload, isAuthenticted: true };
 
     case "logout":
-      return {...state, user:null, isAuthenticted: false}
+      return { ...state, user: null, isAuthenticted: false };
     default:
       throw new Error("invalid action");
   }
-
 }
 
 const FAKE_USER = {
@@ -30,17 +29,18 @@ function AuthProvider({ children }) {
     initialState
   );
   function login(email, password) {
-    if(email===FAKE_USER.email&&password===FAKE_USER.password)
-    {
-      dispatch({type:"login",payload:FAKE_USER})
+    if (email === FAKE_USER.email && password === FAKE_USER.password) {
+      dispatch({ type: "login", payload: FAKE_USER });
     }
   }
   function logout() {
-    dispatch({type:"logout"})
+    dispatch({ type: "logout" });
   }
-  return <AuthContext.Provider value={
-    {user,isAuthenticted,login,logout}
-  }>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ user, isAuthenticted, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 function useAuth() {
   const context = useContext(AuthContext);
@@ -50,4 +50,4 @@ function useAuth() {
   return context;
 }
 
-export {AuthProvider,useAuth}
+export { AuthProvider, useAuth };

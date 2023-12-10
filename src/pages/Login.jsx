@@ -18,10 +18,12 @@ export default function Login() {
     if(email&&password)
     login(email,password)
   }
-  useEffect(function(){
-    if(isAuthenticted) navigate("/app");
-  },[isAuthenticted,navigate])
-
+  useEffect(
+    function () {
+      if (isAuthenticted) navigate("/app", { replace: true });
+    },
+    [isAuthenticted, navigate]
+  );
 
   return (
     <main className={styles.login}>

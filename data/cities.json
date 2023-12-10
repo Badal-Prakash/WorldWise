@@ -37,28 +37,64 @@
       "id": 98443200
     },
     {
-      "cityName": "Laspuna",
+      "cityName": "Iscar",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2023-12-10T14:05:31.577Z",
+      "date": "2023-12-10T17:07:13.645Z",
       "notes": "",
       "position": {
-        "lat": "42.53689200787317",
-        "lng": "0.17578125"
+        "lat": "41.376808565702355",
+        "lng": "-4.526367187500001"
       },
       "id": 98443201
     },
     {
-      "cityName": "Segre-en-Anjou Bleu",
+      "cityName": "Fargues-sur-Ourbise",
       "country": "France",
       "emoji": "🇫🇷",
-      "date": "2023-12-10T14:05:33.811Z",
+      "date": "2023-12-10T17:25:17.202Z",
       "notes": "",
       "position": {
-        "lat": "47.7097615426664",
-        "lng": "-0.8349609375000001"
+        "lat": "44.26093725039923",
+        "lng": "0.13183593750000003"
       },
       "id": 98443202
+    },
+    {
+      "cityName": "Kondapuram",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-12-10T17:25:22.855Z",
+      "notes": "",
+      "position": {
+        "lat": "14.732386081418454",
+        "lng": "78.20068359375001"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Azlor",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-12-10T17:26:50.281Z",
+      "notes": "",
+      "position": {
+        "lat": "42.09822241118974",
+        "lng": "-0.02197265625"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Ketovo",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-12-10T17:29:57.685Z",
+      "notes": "",
+      "position": {
+        "lat": "55.57834467218206",
+        "lng": "65.74218750000001"
+      },
+      "id": 98443205
     }
   ]
 }
